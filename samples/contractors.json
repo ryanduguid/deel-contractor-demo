@@ -1,0 +1,52 @@
+[
+  {
+    "_comment": "MONEY SHOT — full-time exclusive German 'contractor' = employee + PE risk. (Exactly what Deel's EOR solves.)",
+    "name": "Anna Schmidt",
+    "country": "DE",
+    "us_person": false,
+    "ytd_paid": 90000,
+    "form_on_file": "W-8BEN",
+    "services_in_us": false,
+    "full_time_exclusive": true
+  },
+  {
+    "_comment": "US contractor paid > $600 with no W-9 — 1099-NEC obligation missed.",
+    "name": "John Carter",
+    "country": "US",
+    "us_person": true,
+    "ytd_paid": 30000,
+    "form_on_file": null,
+    "services_in_us": true,
+    "full_time_exclusive": false
+  },
+  {
+    "_comment": "Foreign contractor, no W-8BEN, and performs services in the US — withholding flag.",
+    "name": "Raj Patel",
+    "country": "IN",
+    "us_person": false,
+    "ytd_paid": 25000,
+    "form_on_file": null,
+    "services_in_us": true,
+    "full_time_exclusive": false
+  },
+  {
+    "_comment": "US contractor, W-9 on file — fine.",
+    "name": "Maria Lopez",
+    "country": "US",
+    "us_person": true,
+    "ytd_paid": 45000,
+    "form_on_file": "W-9",
+    "services_in_us": true,
+    "full_time_exclusive": false
+  },
+  {
+    "_comment": "Foreign contractor, W-8BEN on file, part-time — fine.",
+    "name": "Yuki Tanaka",
+    "country": "JP",
+    "us_person": false,
+    "ytd_paid": 18000,
+    "form_on_file": "W-8BEN",
+    "services_in_us": false,
+    "full_time_exclusive": false
+  }
+]

@@ -1,0 +1,2 @@
+# The demo runs on the Python standard library alone (urllib + json).
+# Live mode needs only a Deel API token (DEEL_API_TOKEN) — free self-serve sandbox.
