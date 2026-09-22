@@ -75,7 +75,8 @@ _MOCK_SKILL = {
         "jurisdiction": "US", "tier": 1, "verifier": "Amir Pelinkovic (US lead)",
         "rules": {
             # Illustrative — production reads these from the skill.
-            "form_1099_threshold": 600.0,    # 1099-NEC required for US persons paid > $600
+            "form_1099_thresholds": {"2025": 600.0, "2026": 2000.0},
+            "threshold_source": "https://www.irs.gov/businesses/small-businesses-self-employed/am-i-required-to-file-a-form-1099-or-other-information-return",
             "us_person_form": "W-9",
             "foreign_person_form": "W-8BEN",
             "us_source_withholding": 0.30,   # default FDAP/US-source withholding absent a treaty rate

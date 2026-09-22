@@ -7,17 +7,19 @@
     "ytd_paid": 90000,
     "form_on_file": "W-8BEN",
     "services_in_us": false,
-    "full_time_exclusive": true
+    "full_time_exclusive": true,
+    "payment_year": 2026
   },
   {
-    "_comment": "US contractor paid > $600 with no W-9 — 1099-NEC obligation missed.",
+    "_comment": "US contractor paid at least $2,000 in 2026 with no W-9; check reporting and documentation.",
     "name": "John Carter",
     "country": "US",
     "us_person": true,
     "ytd_paid": 30000,
     "form_on_file": null,
     "services_in_us": true,
-    "full_time_exclusive": false
+    "full_time_exclusive": false,
+    "payment_year": 2026
   },
   {
     "_comment": "Foreign contractor, no W-8BEN, and performs services in the US — withholding flag.",
@@ -27,7 +29,8 @@
     "ytd_paid": 25000,
     "form_on_file": null,
     "services_in_us": true,
-    "full_time_exclusive": false
+    "full_time_exclusive": false,
+    "payment_year": 2026
   },
   {
     "_comment": "US contractor, W-9 on file — fine.",
@@ -37,7 +40,8 @@
     "ytd_paid": 45000,
     "form_on_file": "W-9",
     "services_in_us": true,
-    "full_time_exclusive": false
+    "full_time_exclusive": false,
+    "payment_year": 2026
   },
   {
     "_comment": "Foreign contractor, W-8BEN on file, part-time — fine.",
@@ -47,6 +51,7 @@
     "ytd_paid": 18000,
     "form_on_file": "W-8BEN",
     "services_in_us": false,
-    "full_time_exclusive": false
+    "full_time_exclusive": false,
+    "payment_year": 2026
   }
 ]

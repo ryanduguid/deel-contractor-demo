@@ -42,6 +42,7 @@ def normalize(c: dict) -> dict:
         "country": (c.get("country") or "").upper(),
         "us_person": bool(c.get("us_person", False)),
         "ytd_paid": float(c.get("ytd_paid", 0)),
+        "payment_year": c.get("payment_year"),
         "form_on_file": c.get("form_on_file"),         # "W-9" | "W-8BEN" | null
         "services_in_us": bool(c.get("services_in_us", False)),
         "full_time_exclusive": bool(c.get("full_time_exclusive", False)),

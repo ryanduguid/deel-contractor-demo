@@ -10,16 +10,16 @@
 <text x="24" y="150" xml:space="preserve" fill="#c9d1d9">       A full-time, exclusive 'contractor' in DE looks like an employee — risking reclassification, back payroll taxes, and a taxable presence (PE) for the company there. Consider an EOR or a local entity.</text>
 <text x="24" y="194" xml:space="preserve" fill="#e6edf3">🌍  John Carter · US · $30,000 YTD · form: none</text>
 <text x="24" y="216" xml:space="preserve" fill="#39c5cf">    OpenAccountants → US contractor payments (1099 / W-8BEN / classification)  (tier 1, signed off by Amir Pelinkovic (US lead))</text>
-<text x="24" y="238" xml:space="preserve" fill="#d29922">    ⚠️  1099-NEC required — no W-9 on file</text>
-<text x="24" y="260" xml:space="preserve" fill="#c9d1d9">       Paid $30,000 (&gt; $600). Collect a W-9 and issue a 1099-NEC for this US contractor.</text>
+<text x="24" y="238" xml:space="preserve" fill="#d29922">    ⚠️  1099-NEC threshold met; no W-9 on file</text>
+<text x="24" y="260" xml:space="preserve" fill="#c9d1d9">       2026: $30,000.00 paid; reporting threshold $2,000 or more. Collect a W-9. Check corporate-payee and payment-method exceptions, and backup withholding, before deciding whether to file.</text>
 <text x="24" y="304" xml:space="preserve" fill="#e6edf3">🌍  Raj Patel · IN · $25,000 YTD · form: none  [works in US]</text>
 <text x="24" y="326" xml:space="preserve" fill="#39c5cf">    OpenAccountants → US contractor payments (1099 / W-8BEN / classification)  (tier 1, signed off by Amir Pelinkovic (US lead))</text>
 <text x="24" y="348" xml:space="preserve" fill="#d29922">    ⚠️  Foreign contractor — no W-8BEN on file</text>
 <text x="24" y="370" xml:space="preserve" fill="#c9d1d9">       Get a W-8BEN on file (foreign persons get no 1099). Services performed in the US can trigger 30% US-source withholding (or a treaty rate).</text>
 <text x="24" y="414" xml:space="preserve" fill="#e6edf3">🌍  Maria Lopez · US · $45,000 YTD · form: W-9</text>
 <text x="24" y="436" xml:space="preserve" fill="#39c5cf">    OpenAccountants → US contractor payments (1099 / W-8BEN / classification)  (tier 1, signed off by Amir Pelinkovic (US lead))</text>
-<text x="24" y="458" xml:space="preserve" fill="#3fb950">    ✅ US contractor — W-9 on file, 1099 will issue</text>
-<text x="24" y="480" xml:space="preserve" fill="#c9d1d9">       $45,000 paid; documentation in order.</text>
+<text x="24" y="458" xml:space="preserve" fill="#d29922">    ⚠️  1099-NEC threshold met</text>
+<text x="24" y="480" xml:space="preserve" fill="#c9d1d9">       2026: $45,000.00 paid; reporting threshold $2,000 or more. W-9 on file. Check corporate-payee and payment-method exceptions, and backup withholding, before deciding whether to file.</text>
 <text x="24" y="524" xml:space="preserve" fill="#e6edf3">🌍  Yuki Tanaka · JP · $18,000 YTD · form: W-8BEN</text>
 <text x="24" y="546" xml:space="preserve" fill="#39c5cf">    OpenAccountants → US contractor payments (1099 / W-8BEN / classification)  (tier 1, signed off by Amir Pelinkovic (US lead))</text>
 <text x="24" y="568" xml:space="preserve" fill="#3fb950">    ✅ Foreign contractor — W-8BEN on file</text>

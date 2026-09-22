@@ -3,7 +3,8 @@
 The catches when you pay people across borders:
   - a "contractor" working **full-time and exclusively** looks like an employee —
     misclassification + permanent-establishment (PE) risk in their country
-  - a **US contractor** paid over $600 needs a **W-9** and a **1099-NEC**
+  - a **US contractor** needs documentation checked separately from the yearly
+    **1099-NEC** reporting threshold
   - a **foreign contractor** needs a **W-8BEN** on file (no 1099); if the work is
     performed in the US, US-source withholding can apply
 
@@ -19,7 +20,6 @@ def check(c: dict, oa_skill: dict) -> dict:
     rules = oa_skill.get("rules", {})
     base = {"oa_skill": oa_skill.get("slug"), "oa_skill_name": oa_skill.get("name"),
             "tier": oa_skill.get("tier"), "verifier": oa_skill.get("verifier")}
-    threshold = rules.get("form_1099_threshold", 600.0)
     wh = rules.get("us_source_withholding", 0.30)
 
     # Most severe first: misclassification / PE risk.
@@ -30,13 +30,21 @@ def check(c: dict, oa_skill: dict) -> dict:
                 "detail": f"A full-time, exclusive '{('contractor' )}' in {where} looks like an employee — risking reclassification, back payroll taxes, and a taxable presence (PE) for the company there. Consider an EOR or a local entity."}
 
     if c["us_person"]:
-        if c["ytd_paid"] > threshold and c["form_on_file"] != rules.get("us_person_form", "W-9"):
+        year = c.get("payment_year")
+        threshold = rules.get("form_1099_thresholds", {}).get(str(year))
+        missing_w9 = c["form_on_file"] != rules.get("us_person_form", "W-9")
+        documentation = "Collect a W-9." if missing_w9 else "W-9 on file."
+        if threshold is None:
             return {**base, "status": "warn",
-                    "headline": f"1099-NEC required — no W-9 on file",
-                    "detail": f"Paid ${c['ytd_paid']:,.0f} (> ${threshold:,.0f}). Collect a W-9 and issue a 1099-NEC for this US contractor."}
-        return {**base, "status": "ok",
-                "headline": "US contractor — W-9 on file, 1099 will issue",
-                "detail": f"${c['ytd_paid']:,.0f} paid; documentation in order."}
+                    "headline": "Confirm the payment year's 1099-NEC threshold",
+                    "detail": f"{documentation} No dated threshold is loaded for {year or 'the missing payment year'}; do not use an undated fallback."}
+        reporting = c["ytd_paid"] >= threshold
+        headline = "1099-NEC threshold met" if reporting else "Below the general 1099-NEC threshold"
+        if missing_w9:
+            headline += "; no W-9 on file"
+        return {**base, "status": "warn" if reporting or missing_w9 else "ok",
+                "headline": headline,
+                "detail": f"{year}: ${c['ytd_paid']:,.2f} paid; reporting threshold ${threshold:,.0f} or more. {documentation} Check corporate-payee and payment-method exceptions, and backup withholding, before deciding whether to file."}
 
     # Foreign person
     if c["form_on_file"] != rules.get("foreign_person_form", "W-8BEN"):
