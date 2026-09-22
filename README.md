@@ -38,7 +38,7 @@ Five contractors run through the OpenAccountants MCP:
 | **DE — full-time, exclusive** | ⚠️ **Misclassification / PE risk** |
 | US — $30k, no W-9 | ⚠️ 2026 reporting threshold met; collect W-9 |
 | IN — no W-8BEN, works in US | ⚠️ W-8BEN + US-source withholding |
-| US — W-9 on file | ✅ Documentation in order |
+| US — W-9 on file | ✅ W-9 on file; 1099-NEC threshold met |
 | JP — W-8BEN, part-time | ✅ Documentation in order |
 
 **The money shot:** the German contractor working full-time and exclusively. On paper a contractor, in substance an employee — creating reclassification exposure *and* a permanent establishment for the company in Germany. OpenAccountants flags it; the fix (an EOR or a local entity) is exactly what Deel sells.

@@ -40,9 +40,9 @@ def check(c: dict, oa_skill: dict) -> dict:
                     "detail": f"{documentation} No dated threshold is loaded for {year or 'the missing payment year'}; do not use an undated fallback."}
         reporting = c["ytd_paid"] >= threshold
         headline = "1099-NEC threshold met" if reporting else "Below the general 1099-NEC threshold"
-        if missing_w9:
-            headline += "; no W-9 on file"
-        return {**base, "status": "warn" if reporting or missing_w9 else "ok",
+        headline += "; no W-9 on file" if missing_w9 else "; W-9 on file"
+        # Filing a 1099 for a documented contractor is routine, not a risk.
+        return {**base, "status": "warn" if missing_w9 else "ok",
                 "headline": headline,
                 "detail": f"{year}: ${c['ytd_paid']:,.2f} paid; reporting threshold ${threshold:,.0f} or more. {documentation} Check corporate-payee and payment-method exceptions, and backup withholding, before deciding whether to file."}
 
