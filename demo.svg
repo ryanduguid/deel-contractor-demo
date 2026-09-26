@@ -1,27 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1688" height="630" viewBox="0 0 1688 630" font-family="SFMono-Regular,Consolas,Menlo,monospace" font-size="14">
-<rect width="1688" height="630" rx="10" fill="#0d1117"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="903" height="1290" viewBox="0 0 903 1290" font-family="SFMono-Regular,Consolas,Menlo,monospace" font-size="14">
+<rect width="903" height="1290" rx="10" fill="#0d1117"/>
 <circle cx="20" cy="18" r="6" fill="#ff5f56"/>
 <circle cx="40" cy="18" r="6" fill="#ffbd2e"/>
 <circle cx="60" cy="18" r="6" fill="#27c93f"/>
-<text x="24" y="40" xml:space="preserve" fill="#58a6ff">Deel → OpenAccountants · contractor-tax demo  [MOCK (set OA_MCP_TOKEN + DEEL_API_TOKEN to go live)]</text>
-<text x="24" y="84" xml:space="preserve" fill="#e6edf3">🌍  Anna Schmidt · DE · $90,000 YTD · form: W-8BEN  [full-time/exclusive]</text>
-<text x="24" y="106" xml:space="preserve" fill="#39c5cf">    OpenAccountants → US contractor payments (1099 / W-8BEN / classification)  (tier 1, signed off by Amir Pelinkovic (US lead))</text>
-<text x="24" y="128" xml:space="preserve" fill="#d29922">    ⚠️  Misclassification / permanent-establishment risk</text>
-<text x="24" y="150" xml:space="preserve" fill="#c9d1d9">       A full-time, exclusive 'contractor' in DE looks like an employee — risking reclassification, back payroll taxes, and a taxable presence (PE) for the company there. Consider an EOR or a local entity.</text>
-<text x="24" y="194" xml:space="preserve" fill="#e6edf3">🌍  John Carter · US · $30,000 YTD · form: none</text>
-<text x="24" y="216" xml:space="preserve" fill="#39c5cf">    OpenAccountants → US contractor payments (1099 / W-8BEN / classification)  (tier 1, signed off by Amir Pelinkovic (US lead))</text>
-<text x="24" y="238" xml:space="preserve" fill="#d29922">    ⚠️  1099-NEC required — no W-9 on file</text>
-<text x="24" y="260" xml:space="preserve" fill="#c9d1d9">       Paid $30,000 (&gt; $600). Collect a W-9 and issue a 1099-NEC for this US contractor.</text>
-<text x="24" y="304" xml:space="preserve" fill="#e6edf3">🌍  Raj Patel · IN · $25,000 YTD · form: none  [works in US]</text>
-<text x="24" y="326" xml:space="preserve" fill="#39c5cf">    OpenAccountants → US contractor payments (1099 / W-8BEN / classification)  (tier 1, signed off by Amir Pelinkovic (US lead))</text>
-<text x="24" y="348" xml:space="preserve" fill="#d29922">    ⚠️  Foreign contractor — no W-8BEN on file</text>
-<text x="24" y="370" xml:space="preserve" fill="#c9d1d9">       Get a W-8BEN on file (foreign persons get no 1099). Services performed in the US can trigger 30% US-source withholding (or a treaty rate).</text>
-<text x="24" y="414" xml:space="preserve" fill="#e6edf3">🌍  Maria Lopez · US · $45,000 YTD · form: W-9</text>
-<text x="24" y="436" xml:space="preserve" fill="#39c5cf">    OpenAccountants → US contractor payments (1099 / W-8BEN / classification)  (tier 1, signed off by Amir Pelinkovic (US lead))</text>
-<text x="24" y="458" xml:space="preserve" fill="#3fb950">    ✅ US contractor — W-9 on file, 1099 will issue</text>
-<text x="24" y="480" xml:space="preserve" fill="#c9d1d9">       $45,000 paid; documentation in order.</text>
-<text x="24" y="524" xml:space="preserve" fill="#e6edf3">🌍  Yuki Tanaka · JP · $18,000 YTD · form: W-8BEN</text>
-<text x="24" y="546" xml:space="preserve" fill="#39c5cf">    OpenAccountants → US contractor payments (1099 / W-8BEN / classification)  (tier 1, signed off by Amir Pelinkovic (US lead))</text>
-<text x="24" y="568" xml:space="preserve" fill="#3fb950">    ✅ Foreign contractor — W-8BEN on file</text>
-<text x="24" y="590" xml:space="preserve" fill="#c9d1d9">       $18,000 paid; no 1099 required, documentation in order.</text>
+<text x="24" y="40" xml:space="preserve" fill="#58a6ff">Deel → OpenAccountants · contractor demo [BUNDLED ILLUSTRATIVE RULES]</text>
+<text x="24" y="84" xml:space="preserve" fill="#e6edf3">🌍  Anna Schmidt · foreign person · DE</text>
+<text x="24" y="106" xml:space="preserve" fill="#c9d1d9">    2026 payments: 90,000.00 USD · reported form: W-8BEN</text>
+<text x="24" y="128" xml:space="preserve" fill="#39c5cf">    OpenAccountants → Illustrative contractor payment screen (unverified sample rules)</text>
+<text x="24" y="150" xml:space="preserve" fill="#c9d1d9">    Payment and relationship facts screened</text>
+<text x="24" y="172" xml:space="preserve" fill="#39c5cf">    ℹ️ amount: The US-person payment threshold is not applied to this reported foreign person.</text>
+<text x="24" y="194" xml:space="preserve" fill="#39c5cf">    ℹ️ documentation: Reported foreign-person form: W-8BEN; suitability and validity need</text>
+<text x="24" y="216" xml:space="preserve" fill="#c9d1d9">       assessment.</text>
+<text x="24" y="238" xml:space="preserve" fill="#39c5cf">    ℹ️ services: The input reports no US services; no treaty or withholding conclusion is made.</text>
+<text x="24" y="260" xml:space="preserve" fill="#d29922">    ⚠️ relationship: Full-time and exclusive work is a relationship-review trigger, not a</text>
+<text x="24" y="282" xml:space="preserve" fill="#c9d1d9">       worker-classification or permanent-establishment conclusion.</text>
+<text x="24" y="326" xml:space="preserve" fill="#e6edf3">🌍  John Carter · US person · US</text>
+<text x="24" y="348" xml:space="preserve" fill="#c9d1d9">    2026 payments: 30,000.00 USD · reported form: none</text>
+<text x="24" y="370" xml:space="preserve" fill="#39c5cf">    OpenAccountants → Illustrative contractor payment screen (unverified sample rules)</text>
+<text x="24" y="392" xml:space="preserve" fill="#c9d1d9">    Payment and relationship facts screened</text>
+<text x="24" y="414" xml:space="preserve" fill="#d29922">    ⚠️ amount: The supplied 2026 amount meets the inclusive $2,000 threshold. Filing</text>
+<text x="24" y="436" xml:space="preserve" fill="#c9d1d9">       requirements and exceptions need separate assessment.</text>
+<text x="24" y="458" xml:space="preserve" fill="#d29922">    ⚠️ documentation: No W-9 reported in the input.</text>
+<text x="24" y="480" xml:space="preserve" fill="#39c5cf">    ℹ️ services: The foreign-person services screen is not applied to this reported US person.</text>
+<text x="24" y="502" xml:space="preserve" fill="#39c5cf">    ℹ️ relationship: This particular relationship trigger is not reported; other classification</text>
+<text x="24" y="524" xml:space="preserve" fill="#c9d1d9">       factors are not assessed.</text>
+<text x="24" y="568" xml:space="preserve" fill="#e6edf3">🌍  Raj Patel · foreign person · IN</text>
+<text x="24" y="590" xml:space="preserve" fill="#c9d1d9">    2026 payments: 25,000.00 USD · reported form: none</text>
+<text x="24" y="612" xml:space="preserve" fill="#39c5cf">    OpenAccountants → Illustrative contractor payment screen (unverified sample rules)</text>
+<text x="24" y="634" xml:space="preserve" fill="#c9d1d9">    Payment and relationship facts screened</text>
+<text x="24" y="656" xml:space="preserve" fill="#39c5cf">    ℹ️ amount: The US-person payment threshold is not applied to this reported foreign person.</text>
+<text x="24" y="678" xml:space="preserve" fill="#d29922">    ⚠️ documentation: No foreign-person form reported; the suitable form needs assessment.</text>
+<text x="24" y="700" xml:space="preserve" fill="#d29922">    ⚠️ services: US services are reported. Review sourcing, documentation and withholding even</text>
+<text x="24" y="722" xml:space="preserve" fill="#c9d1d9">       if a form is present.</text>
+<text x="24" y="744" xml:space="preserve" fill="#39c5cf">    ℹ️ relationship: This particular relationship trigger is not reported; other classification</text>
+<text x="24" y="766" xml:space="preserve" fill="#c9d1d9">       factors are not assessed.</text>
+<text x="24" y="810" xml:space="preserve" fill="#e6edf3">🌍  Maria Lopez · US person · US</text>
+<text x="24" y="832" xml:space="preserve" fill="#c9d1d9">    2026 payments: 45,000.00 USD · reported form: W-9</text>
+<text x="24" y="854" xml:space="preserve" fill="#39c5cf">    OpenAccountants → Illustrative contractor payment screen (unverified sample rules)</text>
+<text x="24" y="876" xml:space="preserve" fill="#c9d1d9">    Payment and relationship facts screened</text>
+<text x="24" y="898" xml:space="preserve" fill="#d29922">    ⚠️ amount: The supplied 2026 amount meets the inclusive $2,000 threshold. Filing</text>
+<text x="24" y="920" xml:space="preserve" fill="#c9d1d9">       requirements and exceptions need separate assessment.</text>
+<text x="24" y="942" xml:space="preserve" fill="#39c5cf">    ℹ️ documentation: W-9 reported present; validity has not been checked.</text>
+<text x="24" y="964" xml:space="preserve" fill="#39c5cf">    ℹ️ services: The foreign-person services screen is not applied to this reported US person.</text>
+<text x="24" y="986" xml:space="preserve" fill="#39c5cf">    ℹ️ relationship: This particular relationship trigger is not reported; other classification</text>
+<text x="24" y="1008" xml:space="preserve" fill="#c9d1d9">       factors are not assessed.</text>
+<text x="24" y="1052" xml:space="preserve" fill="#e6edf3">🌍  Yuki Tanaka · foreign person · JP</text>
+<text x="24" y="1074" xml:space="preserve" fill="#c9d1d9">    2026 payments: 18,000.00 USD · reported form: W-8BEN</text>
+<text x="24" y="1096" xml:space="preserve" fill="#39c5cf">    OpenAccountants → Illustrative contractor payment screen (unverified sample rules)</text>
+<text x="24" y="1118" xml:space="preserve" fill="#c9d1d9">    Payment and relationship facts screened</text>
+<text x="24" y="1140" xml:space="preserve" fill="#39c5cf">    ℹ️ amount: The US-person payment threshold is not applied to this reported foreign person.</text>
+<text x="24" y="1162" xml:space="preserve" fill="#39c5cf">    ℹ️ documentation: Reported foreign-person form: W-8BEN; suitability and validity need</text>
+<text x="24" y="1184" xml:space="preserve" fill="#c9d1d9">       assessment.</text>
+<text x="24" y="1206" xml:space="preserve" fill="#39c5cf">    ℹ️ services: The input reports no US services; no treaty or withholding conclusion is made.</text>
+<text x="24" y="1228" xml:space="preserve" fill="#39c5cf">    ℹ️ relationship: This particular relationship trigger is not reported; other classification</text>
+<text x="24" y="1250" xml:space="preserve" fill="#c9d1d9">       factors are not assessed.</text>
 </svg>
