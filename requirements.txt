@@ -1,2 +1,2 @@
-# The demo runs on the Python standard library alone (urllib + json).
-# Live mode needs only a Deel API token (DEEL_API_TOKEN) — free self-serve sandbox.
+# Python 3.10 or later; standard library only.
+# The optional OpenAccountants adapter has not been verified against the service.
