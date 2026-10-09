@@ -1,5 +1,9 @@
 # Deel → OpenAccountants: illustrative contractor screening
 
+**Fork status**
+
+[![Fork code quality](https://app.codacy.com/project/badge/Grade/95e0c8bb9fbe4794a0cf17406b56af2a?branch=main)](https://app.codacy.com/gh/ryanduguid/deel-contractor-demo/dashboard)
+
 Screen supplied payment, documentation, service-location and relationship facts.
 Each finding remains visible independently. The example does not determine
 filing, withholding, worker classification or permanent establishment, and its
