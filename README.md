@@ -1,17 +1,19 @@
 # Deel → OpenAccountants: contractor-tax demo
 
-**The pitch in one line:** Deel pays your global contractors. OpenAccountants flags the **tax obligations and risks** behind each payment — misclassification, permanent establishment, 1099s, W-8BENs, withholding — signed off by a named licensed accountant.
+Demonstrates contractor-tax risk checks on Deel-shaped records using OpenAccountants sample rules, with an optional live MCP connection.
+
+Default runs use bundled sample responses. Their rates, verdicts and reviewer labels are illustrative fixtures, not evidence that an accountant reviewed the demo or a live Guide. For live use, check the fetched Guide's review status, reviewer, version and review date against the [review method](https://www.openaccountants.com/review-method). A jurisdiction lead's name alone does not establish review. Have a qualified professional review outputs before filing or acting on them.
 
 ```
 Deel contractors
   └─ { name, country, us_person, ytd_paid, form_on_file, full_time_exclusive }
-        └─ OpenAccountants MCP  →  load the verified contractor-payments skill
+        └─ OpenAccountants MCP  →  load the contractor-payments skill
               └─ Verdict:  ⚠️ misclassification / permanent-establishment risk   ← the catch
                            ⚠️ 1099-NEC required (US, >$600, no W-9)
                            ⚠️ foreign contractor — no W-8BEN (+ US-source withholding)
                            ✅ documentation in order
                  · the rule that decided it (cited)
-                 · the named CPA who signed it off
+                 · the Guide's published review status, if present
 ```
 
 ![Deel → OpenAccountants demo](demo.svg)
@@ -27,7 +29,7 @@ Paying people across borders is a minefield Deel already navigates operationally
 - a **foreign contractor** needs a **W-8BEN** on file (no 1099), and US-source work can trigger withholding.
 
 - **Deel = the global payment + compliance rails.**
-- **OpenAccountants = the tax-risk lens** on each relationship, verified and accountant-signed.
+- **OpenAccountants = the tax-risk lens** on each relationship, using rules whose review status must be checked.
 
 ## What it shows
 
@@ -55,7 +57,7 @@ python pipeline.py samples/contractors.json
 ### Go live
 
 ```bash
-export OA_MCP_TOKEN=...      # OpenAccountants account token (uses the live verified rules)
+export OA_MCP_TOKEN=...      # OpenAccountants account token (uses live Guide content; check review status)
 export DEEL_API_TOKEN=...    # Deel token (free self-serve sandbox at demo.deel.com)
 python pipeline.py
 ```
@@ -72,5 +74,5 @@ python pipeline.py
 
 ## Honest notes
 
-- `contractor_check.py` is a **risk/obligation signal** — not a formal worker-classification opinion or a full treaty analysis. Production leans on the full OA skill + an agent step; the named-CPA sign-off makes the verdict relianceable.
-- Rules ($600 1099 threshold, W-9/W-8BEN, 30% US-source withholding) are US figures; live, every value comes from `get_skill`. The verifier (Amir Pelinkovic) is the real OpenAccountants US lead.
+- `contractor_check.py` is a **risk/obligation signal**; not a formal worker-classification opinion or a full treaty analysis. Production leans on the full OA skill + an agent step; professional review must be established for the specific Guide version and your facts.
+- Rules ($600 1099 threshold, W-9/W-8BEN, 30% US-source withholding) are US figures; the bundled reviewer label is illustrative. Inspect the actual `get_skill` response and its review record in live mode.
