@@ -2,7 +2,7 @@
 
 **Fork status**
 
-[![Fork code quality](https://app.codacy.com/project/badge/Grade/95e0c8bb9fbe4794a0cf17406b56af2a?branch=main)](https://app.codacy.com/gh/ryanduguid/deel-contractor-demo/dashboard)
+[![Fork code quality](https://img.shields.io/codacy/grade/95e0c8bb9fbe4794a0cf17406b56af2a/main?style=flat&labelColor=000000)](https://app.codacy.com/gh/ryanduguid/deel-contractor-demo/dashboard)
 
 Screen supplied payment, documentation, service-location and relationship facts.
 Each finding remains visible independently. The example does not determine
