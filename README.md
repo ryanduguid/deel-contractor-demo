@@ -4,7 +4,7 @@
 
 **Fork status**
 
-[![Fork code quality](https://img.shields.io/codacy/grade/95e0c8bb9fbe4794a0cf17406b56af2a/main?style=flat&labelColor=000000)](https://app.codacy.com/gh/ryanduguid/deel-contractor-demo/dashboard)
+[![Fork code quality](https://img.shields.io/codacy/grade/95e0c8bb9fbe4794a0cf17406b56af2a/main?style=flat&labelColor=000000)](https://app.codacy.com/gh/ryanduguid/deel-contractor-demo/dashboard) [![Fork quality gate](https://sonarcloud.io/api/project_badges/measure?project=ryanduguid_deel-contractor-demo&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ryanduguid_deel-contractor-demo)
 
 </div>
 
