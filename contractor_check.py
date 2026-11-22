@@ -2,6 +2,9 @@
 
 from decimal import Decimal
 
+RULES = {"schema": "contractor-payment-screen-v1",
+         "payment_thresholds_usd": {"2025": "600", "2026": "2000"}}
+
 
 def check(c: dict, oa_skill: dict) -> dict:
     base = {
@@ -12,10 +15,8 @@ def check(c: dict, oa_skill: dict) -> dict:
     }
     findings = []
     rules = oa_skill.get("rules", {})
-    expected = {"schema": "contractor-payment-screen-v1",
-                "payment_thresholds_usd": {"2025": "600", "2026": "2000"}}
     us_person = c["us_person"]
-    if rules != expected:
+    if rules != RULES:
         findings.append({"category": "amount", "status": "incomplete",
                          "text": "Unsupported rule contract. Only the documented 2025 and 2026 payment screens are supported."})
     elif us_person is False:

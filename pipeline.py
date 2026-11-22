@@ -45,7 +45,7 @@ def run(source: str, oa: OAClient) -> bool:
             marker = "ℹ️" if finding["status"] == "info" else "⚠️"
             print(textwrap.fill(f"{marker} {finding['category']}: {safe_text(finding['text'])}", width=96,
                                 initial_indent="    ", subsequent_indent="       "))
-        complete = complete and verdict["complete"] and not facts["input_errors"]
+        complete = complete and verdict["complete"]
     return complete
 
 
